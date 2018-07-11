@@ -1,0 +1,7 @@
+---
+image: pvstodghill/fastqc
+version: 0.11.5__2017-07-10
+java: true
+commands:
+  - fastqc
+
