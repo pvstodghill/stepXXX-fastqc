@@ -38,7 +38,7 @@ function notice_sequence_file {
 if [ -z "$USE_NATIVE" ] ; then
     # use docker
     [ "$HOWTO" ] || HOWTO="./scripts/howto -f howto.yaml -m $ROOT_DIR"
-    [ "$THREADS" ] || THREADS=$(./scripts/howto -q -c fastqc nproc)
+    [ "$THREADS" ] || THREADS=$(./scripts/howto -f howto.yaml -q -c fastqc nproc)
 else
     # go native
     HOWTO=
