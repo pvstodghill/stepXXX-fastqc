@@ -37,8 +37,8 @@ function notice_sequence_file {
 [ "$ROOT_DIR" ] || ROOT_DIR=$(./scripts/find-closest-ancester-dir $THIS_DIR $INPUTS)
 if [ -z "$USE_NATIVE" ] ; then
     # use docker
-    [ "$HOWTO" ] || HOWTO="./scripts/howto -f howto.yaml -m $ROOT_DIR"
-    [ "$THREADS" ] || THREADS=$(./scripts/howto -f howto.yaml -q -c fastqc nproc)
+    [ "$HOWTO" ] || HOWTO="./scripts/howto -f packages.yaml -m $ROOT_DIR"
+    [ "$THREADS" ] || THREADS=$(./scripts/howto -f packages.yaml -q -c fastqc nproc)
 else
     # go native
     HOWTO=
